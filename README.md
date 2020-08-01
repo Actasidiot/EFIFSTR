@@ -4,7 +4,7 @@ This is the official Tensorflow implementation of the Exploring Font-independent
 
 The preprint and the code will be released soon.
 
-![Teaser](img/teaser.PNG)
+![teaser](img/teaser.PNG)
 
 ### Abstract
 
@@ -12,7 +12,7 @@ Scene text recognition (STR) has been extensively studied in last few years. Man
 
 
 ## Model Architecture
-![Architecture](img/pipeline.PNG)
+![architecture](img/pipeline.PNG)
 
 ## Experiments
 

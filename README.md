@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+## Exploring Font-independent Features for Scene Text Recognition
 
-You can use the [editor on GitHub](https://github.com/Actasidiot/EFIFSTR/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This is the official Tensorflow implementation of the Exploring Font-independent Features for Scene Text Recognition.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The preprint and the code will be released soon.
 
-### Markdown
+![Teaser](img/teaser.PNG)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Abstract
 
-```markdown
-Syntax highlighted code block
+Scene text recognition (STR) has been extensively studied in last few years. Many recently-proposed methods are specially designed to accommodate the arbitrary shape, layout and orientation of scene texts, but ignoring that various font (or writing) styles also pose severe challenges to STR. These methods, where font features and content features of characters are tangled, perform poorly in text recognition on scene images with texts in novel font styles. To address this problem, we explore font-independent features of scene texts via attentional generation of glyphs in a large number of font styles. Specifically, we introduce trainable font embeddings to shape the font styles of generated glyphs, with the image feature of scene text only representing its essential patterns. The generation process is directed by the spatial attention mechanism, which effectively copes with irregular texts and generates higher-quality glyphs than existing image-to-image translation methods. Experiments conducted on several STR benchmarks demonstrate the superiority of our method compared to the state of the art.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Model Architecture
+![Architecture](img/pipeline.PNG)
 
-1. Numbered
-2. List
+## Experiments
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Actasidiot/EFIFSTR/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.

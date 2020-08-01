@@ -2,7 +2,7 @@
 
 This is the official Tensorflow implementation of the Exploring Font-independent Features for Scene Text Recognition.
 
-The preprint and the .[code(https://github.com/Actasidiot/EFIFSTR)] will be released soon.
+The preprint and the [code](https://github.com/Actasidiot/EFIFSTR) will be released soon.
 
 ![teaser](img/teaser.PNG)
 

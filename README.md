@@ -1,6 +1,8 @@
 ## Exploring Font-independent Features for Scene Text Recognition
 
-This is the official Tensorflow implementation of the Exploring Font-independent Features for Scene Text Recognition.
+This is the official Tensorflow implementation of the paper:
+
+**Yizhi Wang and Zhouhui Lian. Exploring Font-independent Features for Scene Text Recognition. ACM Multimedia. 2020.**.
 
 The preprint and the [code](https://github.com/Actasidiot/EFIFSTR) will be released soon.
 

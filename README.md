@@ -18,7 +18,7 @@ Scene text recognition (STR) has been extensively studied in last few years. Man
 
 ## Novel Font Scene Text (NFST) Dataset
 
-As scene texts in novel font styles only make up a small proportion in existing benchmarks, we collect 100 text images with novel or unusual font styles to form a new dataset named as the Novel Font Scene Text (NFST) dataset.
+As scene texts in novel font styles only make up a small proportion in existing benchmarks, we collect 100 text images with novel or unusual font styles to form a new dataset named as the Novel Font Scene Text (NFST) dataset ([download link](https://github.com/Actasidiot/EFIFSTR/NFST.zip)).
 <div align=center>
 	<img src="img/NFSTdataset.jpg" width="500"> 
 </div>

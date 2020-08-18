@@ -30,30 +30,25 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 | 90K+ST               | 55      |   45    | 44      |
 | 90K+ST+SA+R          | 71      |   63    |  58     |
 
-    <table>
+<table>
+    <thead>
         <tr>
-            <th>设备</th>
-            <th>设备文件名</th>
-            <th>文件描述符</th>
-            <th>类型</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>成绩</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>张三</th>
+            <th>男</th>
+            <th>60</th>
         </tr>
         <tr>
-            <th>键盘</th>
-            <th>/dev/stdin</th>
-            <th>0</th>
-            <th>标准输入</th>
+            <th>王五</th>
+            <th>男</th>
+            <th>100</th>
         </tr>
-        <tr>
-            <th>显示器</th>
-            <th>/dev/stdout</th>
-            <th>1</th>
-            <th>标准输出</th>
-        </tr>
-        <tr>
-            <th>显示器</th>
-            <th>/dev/stderr</th>
-            <th>2</th>
-            <th>标准错误输出</th>
-        </tr>
-    </table>
+    </tbody>
+</table>
 

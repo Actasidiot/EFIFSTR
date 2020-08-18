@@ -23,8 +23,13 @@ As scene texts in novel font styles only make up a small proportion in existing 
 <div align=center>
 	<img src="img/NFSTdataset.jpg" width="500"> 
 </div>
+
 | Training data        | Ours    |  SAR    |  ASETR  |
 | -----                | ----    | ----    |----     |
 | 90K+ST               | 55      |   45    | 44      |
 | 90K+ST+SA+R          | 71      |   63    |  58     |
- 
+
+| 标题1 | 标题2 | 标题3 |
+| ----- | ---- | ---- |
+| 文本1 | 文本2 | 文本3 |
+| 文本4 | 文本5 | 文本6 |

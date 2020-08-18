@@ -29,7 +29,7 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 | -----                | ----    | ----    |----     |
 | 90K+ST               | 55      |   45    | 44      |
 | 90K+ST+SA+R          | 71      |   63    |  58     |
-
+<div align=center>
 <table>
     <thead>
         <tr>
@@ -51,4 +51,4 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
         </tr>
     </tbody>
 </table>
-
+</div>

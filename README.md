@@ -18,11 +18,12 @@ Scene text recognition (STR) has been extensively studied in last few years. Man
 
 ## Novel Font Scene Text (NFST) Dataset
 
-As scene texts in novel font styles only make up a small proportion in existing benchmarks, we collect 100 text images with novel or unusual font styles to form a new dataset named as the Novel Font Scene Text (NFST) dataset. We compare our method with other two state-of-the-art methods ([ASTER](https://github.com/bgshih/aster) and [SAR](https://github.com/wangpengnorman/SAR-Strong-Baseline-for-Text-Recognition)) whose codes are publicly available. Our method significantly outperforms others on this dataset (see Table 3), whose robustness to font style variance is proved.
-
+As scene texts in novel font styles only make up a small proportion in existing benchmarks, we collect 100 text images with novel or unusual font styles to form a new dataset named as the Novel Font Scene Text (NFST) dataset.
 <div align=center>
 	<img src="img/NFSTdataset.jpg" width="500"> 
 </div>
+
+We compare our method with other two state-of-the-art methods ([ASTER](https://github.com/bgshih/aster) and [SAR](https://github.com/wangpengnorman/SAR-Strong-Baseline-for-Text-Recognition)) whose codes are publicly available. Our method significantly outperforms others on this dataset (see the following table), whose robustness to font style variance is proved.
 
 | Training data        | Ours    |  SAR    |  ASETR  |
 | -----                | ----    | ----    |----     |
@@ -30,9 +31,4 @@ As scene texts in novel font styles only make up a small proportion in existing 
 | 90K+ST+SA+R          | 71      |   63    |  58     |
 
 
-<style>
-table {
-margin: auto;
-}
-</style>
 

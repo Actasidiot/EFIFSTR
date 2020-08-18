@@ -2,7 +2,7 @@
 
 This is the official Tensorflow implementation of the paper:
 
-**Yizhi Wang and Zhouhui Lian. Exploring Font-independent Features for Scene Text Recognition. ACM Multimedia. 2020.**.
+**Yizhi Wang and Zhouhui Lian. Exploring Font-independent Features for Scene Text Recognition. ACM Multimedia. 2020.**
 
 The preprint and the [code](https://github.com/Actasidiot/EFIFSTR) will be released soon.
 
@@ -19,3 +19,5 @@ Scene text recognition (STR) has been extensively studied in last few years. Man
 ## Novel Font Scene Text (NFST) Dataset
 
 As scene texts in novel font styles only make up a small proportion in existing benchmarks, we collect 100 text images with novel or unusual font styles to form a new dataset named as the Novel Font Scene Text (NFST) dataset. We compare our method with other two state-of-the-art methods (ASTER and SAR) whose codes are publicly available. Our method significantly outperforms others on this dataset (see Table 3), whose robustness to font style variance is proved.
+
+<div align=right>![architecture](img/NFSTdataset.jpg)

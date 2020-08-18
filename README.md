@@ -22,11 +22,12 @@ As scene texts in novel font styles only make up a small proportion in existing 
 
 <div align=center>
 	<img src="img/NFSTdataset.jpg" width="500"> 
-</div>
-
-| Training data        | Ours    |  SAR    |  ASETR  |
+	| Training data        | Ours    |  SAR    |  ASETR  |
 | -----                | ----    | ----    |----     |
 | 90K+ST               | 55      |   45    | 44      |
 | 90K+ST+SA+R          | 71      |   63    |  58     |
+</div>
+
+
 
 

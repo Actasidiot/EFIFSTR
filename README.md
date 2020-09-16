@@ -64,7 +64,7 @@ We reuse some code from [ASTER](https://github.com/bgshih/aster), which is deriv
 
 ## Pretrained-model
 
-The pretrained model files are available on . Download `model-demo.zip` and extract it under `experiments/demo/`.
+The pretrained model files are available on this link. Download `model-demo.zip` and extract it under `experiments/demo/`.
 
 To test the preformance of the pretrained-model, simply execute:
 
@@ -77,6 +77,8 @@ This will output the recognition result of NFSF dataset.
 ## Training and on-the-fly evaluation
 
 Data preparation scripts for several popular scene text datasets are located under `tools`. See their source code for usage.
+
+The multi-font glyph images are available on this link. Download `glyphs-325-fonts.npy` and extract it under `data/`.
 
 To run the example training, run
 

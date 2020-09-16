@@ -64,7 +64,7 @@ We reuse some code from [ASTER](https://github.com/bgshih/aster), which is deriv
 
 ## Pretrained-model
 
-The pretrained model files are available on this [link](https://drive.google.com/file/d/1zRKcbZ-2EQ5w3igTQWusKNrbHhi11Tj4/view?usp=sharing). Download `model-demo.zip` and extract it under `experiments/demo/`.
+The pretrained model files are available on this [link](https://drive.google.com/file/d/1zRKcbZ-2EQ5w3igTQWusKNrbHhi11Tj4/view?usp=sharing). Download `model-demo.zip` and extract it under `experiments/demo/log/`.
 
 To test the preformance of the pretrained-model, simply execute:
 

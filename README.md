@@ -58,7 +58,7 @@ conda install tensorflow-gpu=1.15
 ```
 We reuse some code from [ASTER](https://github.com/bgshih/aster), which is derived from Tensorflow Object Detection API.
 
-### build the custom operators and protobuf files
+### Build the custom operators and protobuf files
   1. Go to `c_ops/` and run `build.sh` to build the custom operators
   2. Execute `protoc protos/*.proto --python_out=.` to build the protobuf files
 

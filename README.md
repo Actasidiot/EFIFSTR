@@ -43,7 +43,10 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 
 ## Installation
 
-The code is **TensorFlow r1.15**
+We reuse the code from ([ASTER](https://github.com/bgshih/aster) which is derived from Tensorflow Object Detection API.
+
+- **python 3.6**
+- **TensorFlow r1.15**
 
 We highly recommend using Anaconda to build the environment:
 
@@ -53,13 +56,14 @@ source activate efifstr
 pip install editdistance edit_distance
 conda install tensorflow-gpu=1.15
 ```
+
 ### build the custom operators and protobuf files
   1. Go to `c_ops/` and run `build.sh` to build the custom operators
   2. Execute `protoc protos/*.proto --python_out=.` to build the protobuf files
 
 ## Pretrained-model
 
-The pretrained model files are available on our [release page](https://github.com/bgshih/aster/releases). Download `model-demo.zip` and extract it under `experiments/demo/`.
+The pretrained model files are available on . Download `model-demo.zip` and extract it under `experiments/demo/`.
 
 To test the preformance of the pretrained-model, simply execute:
 
@@ -84,7 +88,7 @@ Change the configuration in `experiments/aster/trainval.prototxt` to configure y
 During the training, you can run a separate program to repeatedly evaluates the produced checkpoints.
 
 ```
-python aster/eval.py
+python eval.py
 ```
 
 Evaluation configuration is also in `trainval.prototxt`.

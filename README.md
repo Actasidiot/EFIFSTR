@@ -46,7 +46,7 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 ### Requirement
 
 - **python 3.6**
-- **TensorFlow r1.15**
+- **TensorFlow 1.15**
 
 We highly recommend using Anaconda to build the environment:
 

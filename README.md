@@ -4,7 +4,6 @@ This is the official Tensorflow implementation of the paper:
 
 **Yizhi Wang and Zhouhui Lian. Exploring Font-independent Features for Scene Text Recognition. ACM Multimedia. 2020.**
 
-![teaser](img/teaser.PNG)
 
 ## Novel Font Scene Text (NFST) Dataset
 
@@ -44,9 +43,9 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 
 ## Prerequisites
 
- **TensorFlow r1.15**.
+The code employs the general framework of ([ASTER](https://github.com/bgshih/aster) and 
 
-
+**TensorFlow r1.15**
 
 ## Installation
   1. Go to `c_ops/` and run `build.sh` to build the custom operators

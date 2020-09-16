@@ -41,9 +41,9 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 </table>
 </div>
 
-## Prerequisites
+## Installation
 
-The code employs the general framework of ([ASTER](https://github.com/bgshih/aster) and 
+The code is **TensorFlow r1.15**
 
 We highly recommend using Anaconda to build the environment:
 
@@ -53,9 +53,42 @@ source activate efifstr
 pip install editdistance edit_distance
 conda install tensorflow-gpu=1.15
 ```
-
-**TensorFlow r1.15**
-
-## Installation
+### build the custom operators and protobuf files
   1. Go to `c_ops/` and run `build.sh` to build the custom operators
   2. Execute `protoc protos/*.proto --python_out=.` to build the protobuf files
+
+## Pretrained-model
+
+The pretrained model files are available on our [release page](https://github.com/bgshih/aster/releases). Download `model-demo.zip` and extract it under `experiments/demo/`.
+
+To test the preformance of the pretrained-model, simply execute:
+
+```
+python eval.py
+```
+
+This will output the recognition result of NFSF dataset.
+
+## Training and on-the-fly evaluation
+
+Data preparation scripts for several popular scene text datasets are located under `tools`. See their source code for usage.
+
+To run the example training, run
+
+```
+python train.py
+```
+
+Change the configuration in `experiments/aster/trainval.prototxt` to configure your own training process.
+
+During the training, you can run a separate program to repeatedly evaluates the produced checkpoints.
+
+```
+python aster/eval.py
+```
+
+Evaluation configuration is also in `trainval.prototxt`.
+
+
+
+

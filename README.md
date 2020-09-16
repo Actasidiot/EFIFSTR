@@ -84,7 +84,7 @@ To run the example training, run
 python train.py
 ```
 
-Change the configuration in `experiments/aster/trainval.prototxt` to configure your own training process.
+Change the configuration in `experiments/demo/trainval.prototxt` to configure your own training process.
 
 During the training, you can run a separate program to repeatedly evaluates the produced checkpoints.
 

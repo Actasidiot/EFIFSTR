@@ -1,0 +1,2 @@
+python train.py --exp_dir experiments/test --num_clones 2
+python eval.py --exp_dir experiments/demo

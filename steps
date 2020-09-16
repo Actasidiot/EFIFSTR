@@ -1,0 +1,9 @@
+python3.5 tensorflow 1.4 cuda8.0 cudnn6.0
+
+conda create -n efifstr python=3.5
+source activate efifstr
+pip install editdistance edit_distance
+#pip install protobuf==3.5.2 tqdm
+conda install cudatoolkit=8.0 cudnn=6.0 tensorflow-gpu=1.4
+
+protoc protos/*.proto --python_out=.

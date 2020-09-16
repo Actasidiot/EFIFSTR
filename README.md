@@ -50,5 +50,4 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 
 ## Installation
   1. Go to `c_ops/` and run `build.sh` to build the custom operators
-  2. Execute `protoc aster/protos/*.proto --python_out=.` to build the protobuf files
-  3. Add `/path/to/aster` to `PYTHONPATH`, or set this variable for every run
+  2. Execute `protoc protos/*.proto --python_out=.` to build the protobuf files

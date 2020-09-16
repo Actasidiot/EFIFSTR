@@ -45,6 +45,15 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 
 The code employs the general framework of ([ASTER](https://github.com/bgshih/aster) and 
 
+We highly recommend using Anaconda to build the environment:
+
+```shell
+conda create -n efifstr python=3.6
+source activate efifstr
+pip install editdistance edit_distance
+conda install tensorflow-gpu=1.15
+```
+
 **TensorFlow r1.15**
 
 ## Installation

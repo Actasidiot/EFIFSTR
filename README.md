@@ -43,7 +43,7 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 
 ## Installation
 
-We reuse the code from ([ASTER](https://github.com/bgshih/aster) which is derived from Tensorflow Object Detection API.
+# Requirement
 
 - **python 3.6**
 - **TensorFlow r1.15**
@@ -56,6 +56,7 @@ source activate efifstr
 pip install editdistance edit_distance
 conda install tensorflow-gpu=1.15
 ```
+We reuse some code from [ASTER](https://github.com/bgshih/aster), which is derived from Tensorflow Object Detection API.
 
 ### build the custom operators and protobuf files
   1. Go to `c_ops/` and run `build.sh` to build the custom operators

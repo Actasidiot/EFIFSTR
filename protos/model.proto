@@ -1,0 +1,23 @@
+syntax = "proto2";
+package protos;
+
+import "protos/feature_extractor.proto";
+import "protos/predictor.proto";
+import "protos/spatial_transformer.proto";
+import "protos/text_generator.proto";
+import "protos/loss.proto";
+
+message Model {
+  oneof model_oneof {
+    MultiPredictorsRecognitionModel multi_predictors_recognition_model = 1;
+  }
+}
+
+message MultiPredictorsRecognitionModel {
+  optional SpatialTransformer spatial_transformer = 1;
+  optional FeatureExtractor feature_extractor = 2;
+  repeated Predictor predictor = 3;
+  optional bool keypoint_supervision = 4 [default = false];
+  optional Loss regression_loss = 5;
+  optional TextGenerator text_generator = 6;
+}

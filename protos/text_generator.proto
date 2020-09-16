@@ -1,0 +1,15 @@
+syntax = "proto2";
+package protos;
+
+import "protos/convnet.proto";
+import "protos/hyperparams.proto";
+import "protos/loss.proto";
+import "protos/bidirectional_rnn.proto";
+
+
+message TextGenerator {
+  repeated BidirectionalRnn bidirectional_rnn = 1;
+  optional Convnet convnet = 2;
+  optional Loss loss = 3;
+  optional bool summarize_activations = 4 [default = false];
+}

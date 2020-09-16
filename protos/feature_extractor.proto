@@ -1,0 +1,11 @@
+syntax = "proto2";
+package protos;
+
+import "protos/convnet.proto";
+import "protos/bidirectional_rnn.proto";
+
+message FeatureExtractor {
+  optional Convnet convnet = 1;
+  repeated BidirectionalRnn bidirectional_rnn = 2;
+  optional bool summarize_activations = 3 [default=false];
+}

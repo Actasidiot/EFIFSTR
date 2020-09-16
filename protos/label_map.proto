@@ -1,0 +1,22 @@
+syntax = "proto2";
+package protos;
+
+message LabelMap {
+  optional CharacterSet character_set = 1;
+  optional int64 label_offset = 2 [default=0];
+  optional int64 unk_label = 3;
+}
+
+message CharacterSet {
+  enum BuiltInSet {
+    LOWERCASE = 0;
+    ALLCASES = 1;
+    ALLCASES_SYMBOLS = 2;
+  }
+
+  oneof source_oneof {
+    string text_file = 1 [default=""];
+    string text_string = 2 [default=""];
+    BuiltInSet built_in_set = 3 [default=LOWERCASE];
+  }
+}

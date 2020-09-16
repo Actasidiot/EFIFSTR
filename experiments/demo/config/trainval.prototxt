@@ -1,0 +1,207 @@
+model {
+  multi_predictors_recognition_model {
+    feature_extractor {
+      convnet {
+        resnet {
+          net_type: SINGLE_BRANCH
+          net_depth: RESNET_50
+          conv_hyperparams {
+            op: CONV
+            regularizer { l2_regularizer { weight: 0 } }
+            initializer { variance_scaling_initializer { } }
+            batch_norm { decay: 0.99 }
+          }
+          summarize_activations: true
+        }
+      }
+      summarize_activations: true
+    }
+
+    text_generator {
+      convnet {
+        tgn_deconvnet {
+          conv_hyperparams {
+            op: CONV
+            regularizer { l2_regularizer { weight: 0 } }
+            initializer { variance_scaling_initializer { } }
+          }
+        }
+      }
+      loss {
+        l1_regression_loss {
+          weight: 0.5
+        }
+      }
+      summarize_activations: true
+    }
+
+    predictor {
+      name: "Forward"
+      attention_predictor {
+        rnn_cell {
+          lstm_cell {
+            num_units: 256
+            forget_bias: 1.0
+            initializer { orthogonal_initializer { } }
+          }
+        }
+        rnn_regularizer { l2_regularizer { weight: 0 } }
+        num_attention_units: 256
+        max_num_steps: 30
+        multi_attention: false
+        beam_width: 5
+        reverse: false
+        label_map {
+          character_set {
+            built_in_set: ALLCASES_SYMBOLS
+          }
+          label_offset: 2
+        }
+        loss {
+          sequence_cross_entropy_loss {
+            sequence_normalize: false
+            sample_normalize: true
+            weight: 0.5
+          }
+        }
+        sync: true
+      }
+    }
+  }
+}
+
+train_config {
+  batch_size: [32,32,16,16]
+  fine_tune_checkpoint: '/data/wangyz/Projects/aster-ori/aster-author/experiments/demo/log/model.ckpt'
+  data_augmentation_options {
+    resize_image_random_method {
+      target_height: 48
+      target_width: 160
+    }
+  }
+  data_augmentation_options {
+    string_filtering {
+      lower_case: false
+      include_charset {
+        built_in_set: ALLCASES_SYMBOLS
+      }
+    }
+  }
+  keep_checkpoint_every_n_hours: 4
+  optimizer {
+    adam_optimizer {
+      learning_rate {
+        exponential_decay_learning_rate {
+          initial_learning_rate: 1e-3
+          decay_steps: 20000
+          decay_factor: 0.9
+        }
+      }
+    }
+  }
+  num_steps: 1200000
+  prefetch_queue_capacity: 100
+  save_summaries_steps: 1000
+}
+
+train_input_reader {
+  num_readers: 4
+  shuffle: true
+  tf_record_input_reader {
+    input_path: "data/synth90k_all.tfrecord"
+  }
+}
+
+train_input_reader {
+  num_readers: 4
+  shuffle: true
+  tf_record_input_reader {
+    input_path: "data/synthtext_crop_all.tfrecord"
+  }
+}
+train_input_reader {
+  num_readers: 4
+  shuffle: true
+  tf_record_input_reader {
+    input_path: "data/SynAdd_train_all.tfrecord"
+  }
+}
+train_input_reader {
+  num_readers: 4
+  shuffle: true
+  tf_record_input_reader {
+    input_path: "data/ic1315coco_train_all.tfrecord"
+  }
+}
+
+
+eval_config {
+  metrics_set: "recognition_metrics"
+  num_examples: 100
+  data_preprocessing_steps {
+    resize_image {
+      target_height: 48
+      target_width: 160
+    }
+  }
+  num_visualizations: 0
+  visualization_export_dir: ""
+}
+
+eval_input_reader {
+  num_epochs: 1
+  num_readers: 1
+  shuffle: false
+  tf_record_input_reader {
+    input_path: "data/nfst.tfrecord"
+  }
+}
+
+#eval_config {
+#  metrics_set: "recognition_metrics"
+#  num_examples: 3000
+#  data_preprocessing_steps {
+#    resize_image {
+#      target_height: 48
+#      target_width: 160
+#    }
+#  }
+#  num_visualizations: 0
+#  only_visualize_incorrect: true
+#  visualization_export_dir: ""
+#  eval_with_lexicon: false
+#}
+
+#eval_input_reader {
+#  num_epochs: 1
+#  num_readers: 1
+#  shuffle: false
+#  tf_record_input_reader {
+#    input_path: "data/iiit5k_test_1k.tfrecord"
+#  }
+#}
+
+#eval_config {
+#  metrics_set: "recognition_metrics"
+#  num_examples: 2077
+#  data_preprocessing_steps {
+#    resize_image {
+#      target_height: 48
+#      target_width: 160
+#    }
+#  }
+#  num_visualizations: 0
+#  only_visualize_incorrect: true
+#  visualization_export_dir: ""
+#  eval_with_lexicon: false
+#}
+
+#eval_input_reader {
+#  num_epochs: 1
+#  num_readers: 1
+#  shuffle: false
+#  tf_record_input_reader {
+#    input_path: "data/ic15_test.tfrecord"
+#  }
+#}
+

@@ -1,0 +1,39 @@
+syntax = "proto2";
+package protos;
+
+import "protos/rnn_cell.proto";
+import "protos/hyperparams.proto";
+import "protos/label_map.proto";
+import "protos/loss.proto";
+
+
+message Predictor {
+  optional string name = 1 [default = "Predictor"];
+  oneof predictor_oneof {
+    AttentionPredictor attention_predictor = 2;
+    CtcPredictor ctc_predictor = 3;
+  }
+}
+
+message AttentionPredictor {
+  optional RnnCell rnn_cell = 1;
+  optional Regularizer rnn_regularizer = 2;
+  optional int32 num_attention_units = 3 [default=128];
+  optional int32 max_num_steps = 4 [default=40];
+  optional bool multi_attention = 5 [default = false];
+  optional int32 beam_width = 6 [default = 1];
+  optional bool reverse = 7 [default = false];
+  optional LabelMap label_map = 8;
+  optional Loss loss = 9;
+  optional LanguageModelRnnCell lm_rnn_cell = 10;
+  optional bool sync = 11 [default = true];
+}
+
+message LanguageModelRnnCell {
+  repeated RnnCell rnn_cell = 1;
+  optional string restore_path = 2 [default = ""];
+}
+
+message CtcPredictor {
+  
+}

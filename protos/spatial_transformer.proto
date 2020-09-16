@@ -1,0 +1,27 @@
+syntax = "proto2";
+package protos;
+
+import "protos/convnet.proto";
+import "protos/hyperparams.proto";
+
+
+message SpatialTransformer {
+  optional Convnet convnet = 1;
+  optional Hyperparams fc_hyperparams = 2;
+
+  // image size for the localization network
+  optional int32 localization_h = 3 [default = 64];
+  optional int32 localization_w = 4 [default = 128];
+
+  // rectified image size
+  optional int32 output_h = 5 [default = 32];
+  optional int32 output_w = 6 [default = 100];
+
+  optional float margin_x = 7 [default = 0.1];
+  optional float margin_y = 8 [default = 0.1];
+
+  optional int32 num_control_points = 9 [default = 20];
+  optional string init_bias_pattern = 10 [default = "identity"];
+  optional string activation = 11 [default = "none"];
+  optional bool summarize_activations = 12 [default = false];
+}

@@ -1,0 +1,24 @@
+syntax = "proto2";
+package protos;
+
+message Loss {
+  oneof loss_oneof {
+    SequenceCrossEntropyLoss sequence_cross_entropy_loss = 1;
+    L2RegressionLoss l2_regression_loss = 2;
+    L1RegressionLoss l1_regression_loss = 3;
+  }
+}
+
+message SequenceCrossEntropyLoss {
+  optional bool sequence_normalize = 1 [default = false];
+  optional bool sample_normalize = 2 [default = true];
+  optional float weight = 3 [default = 1.0];
+}
+
+message L2RegressionLoss {
+  optional float weight = 3 [default = 1.0];
+}
+
+message L1RegressionLoss {
+  optional float weight = 3 [default = 1.0];
+}

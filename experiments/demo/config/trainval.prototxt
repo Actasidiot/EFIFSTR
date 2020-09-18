@@ -72,7 +72,7 @@ model {
 
 train_config {
   batch_size: [32,32,16,16]
-  fine_tune_checkpoint: '/data/wangyz/Projects/aster-ori/aster-author/experiments/demo/log/model.ckpt'
+  #fine_tune_checkpoint: 'data/pretrain/model.ckpt'
   data_augmentation_options {
     resize_image_random_method {
       target_height: 48

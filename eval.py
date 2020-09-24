@@ -15,7 +15,7 @@ from builders import input_reader_builder
 logging.getLogger('tensorflow').propagate = False # avoid logging duplicates
 tf.logging.set_verbosity(tf.logging.INFO)
 logging.basicConfig(level=logging.INFO)
-os.environ["CUDA_VISIBLE_DEVICES"] = '8'
+os.environ["CUDA_VISIBLE_DEVICES"] = '3'
 
 flags = tf.app.flags
 flags.DEFINE_boolean('repeat', True, 'If true, evaluate repeatedly.')

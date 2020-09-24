@@ -54,7 +54,7 @@ Please use Anaconda to build the environment:
 conda create -n efifstr python=3.6
 source activate efifstr
 pip install editdistance edit_distance
-conda install tensorflow-gpu=1.15
+conda install tensorflow-gpu=1.15 pillow matplotlib
 ```
 We reuse some code from [ASTER](https://github.com/bgshih/aster), which is derived from Tensorflow Object Detection API.
 

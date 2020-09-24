@@ -24,9 +24,9 @@ flags.DEFINE_boolean('eval_training_data', False,
 flags.DEFINE_string('checkpoint_dir', '',
                     'Directory containing checkpoints to evaluate, typically '
                     'set to `train_dir` used in the training job.')
-flags.DEFINE_string('exp_dir', 'experiments/retrain',
+flags.DEFINE_string('exp_dir', 'experiments/demo',
                     'Directory containing config, training log and evaluations')
-flags.DEFINE_string('eval_dir', 'experiments/retrain',
+flags.DEFINE_string('eval_dir', 'experiments/demo',
                     'Directory to write eval summaries to.')
 flags.DEFINE_string('pipeline_config_path', '',
                     'Path to a pipeline_pb2.TrainEvalPipelineConfig config '

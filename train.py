@@ -73,7 +73,7 @@ flags.DEFINE_integer('worker_replicas', 1, 'Number of worker+trainer '
 flags.DEFINE_integer('ps_tasks', 0,
                      'Number of parameter server tasks. If None, does not use '
                      'a parameter server.')
-flags.DEFINE_string('exp_dir', 'experiments/retrain/',
+flags.DEFINE_string('exp_dir', 'experiments/demo/',
                     'Directory containing config, training log and evaluations')
 flags.DEFINE_string('train_dir', '',
                     'Directory to save the checkpoints and training summaries.')

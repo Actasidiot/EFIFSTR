@@ -78,7 +78,7 @@ This will output the recognition result of NFSF dataset.
 
 Data preparation scripts for several popular scene text datasets are located under `tools`. See their source code for usage.
 
-The multi-font glyph images are available on this [link](https://drive.google.com/file/d/1datPscKB3VvmcwVanHXFM4IqlCrmp64r/view?usp=sharing). Download `glyphs-325-fonts.npy` and put it under `data/`.
+The multi-font glyph images are available on this ~~[link](https://drive.google.com/file/d/1datPscKB3VvmcwVanHXFM4IqlCrmp64r/view?usp=sharing)~~ ([new link] (https://drive.google.com/file/d/1s3LBOo_aLAG5nOmF91LhDUlHGvpaLa1_/view?usp=sharing) which has better performance). Download `glyphs-325-fonts.npy` and put it under `data/`.
 
 To run the example training, run
 

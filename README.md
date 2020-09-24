@@ -48,7 +48,7 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
 - **python 3.6**
 - **TensorFlow 1.15**
 
-Please use Anaconda to build the environment (otherwise, some errors may occur):
+Please use [Anaconda](https://docs.anaconda.com/anaconda/install/linux/) to build the environment (otherwise, some errors may occur):
 
 ```shell
 conda create -n efifstr python=3.6

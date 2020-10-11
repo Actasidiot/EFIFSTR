@@ -74,6 +74,12 @@ python eval.py
 
 This will output the recognition result of NFSF dataset.
 
+To testing on a single image (data/demo.jpg), simply execute:
+
+```
+python demo.py
+```
+
 ## Training and on-the-fly evaluation
 
 Data preparation scripts for several popular scene text datasets are located under `tools`. See their source code for usage.

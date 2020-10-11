@@ -74,7 +74,7 @@ python eval.py
 
 This will output the recognition result of NFSF dataset.
 
-To testing on a single image (data/demo.jpg), simply execute:
+To test on a single image (data/demo.jpg), simply execute:
 
 ```
 python demo.py

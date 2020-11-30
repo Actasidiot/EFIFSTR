@@ -27,15 +27,15 @@ We compare our method with other two state-of-the-art methods ([ASTER](https://g
     <tbody>
         <tr>
             <th>90K+ST</th>
-            <th>55</th>
-            <th>45</th>
-	    <th>44</th>
+            <th>55%</th>
+            <th>45%</th>
+	    <th>44%</th>
         </tr>
         <tr>
             <th>90K+ST+SA+R</th>
-            <th>71</th>
-            <th>63</th>
-	    <th>58</th>
+            <th>71%</th>
+            <th>63%</th>
+	    <th>58%</th>
         </tr>
     </tbody>
 </table>
